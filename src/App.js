@@ -1,9 +1,20 @@
 import "./App.scss";
-import Home from "./pages/Home";
-
+// import Dashboard from "./pages/Dashboard";
+// import Home from "./pages/Home";
+// import Login from "./pages/Login";
+// import Register from "./pages/Register";
+// import AddBook from "./pages/AddBook";
+// import BookList from "./pages/BookList";
+import UserList from "./pages/UserList";
 function App() {
   return <div className="App">
-    <Home />
+    {/* <Dashboard /> */}
+    {/* <Home /> */}
+    {/* <Login /> */}
+    {/* <Register /> */}
+    {/* <AddBook /> */}
+    {/* <BookList /> */}
+    <UserList />
   </div>;
 }
 

@@ -31,8 +31,9 @@ body {
   input[type="number"]:hover,
   input[type="url"]:hover,
   input[type="search"]:hover,
+  input[type="email"]:hover,
   textarea {
-    background-color: #343a40 !important;
+    background-color: #e9ecf0 !important;
   }
   
   .form-control:focus {

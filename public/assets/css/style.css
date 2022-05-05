@@ -1,68 +1,76 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #202224 !important;
-    color: #ffffff !important;
-    overflow: hidden !important;
-  }
-  
-  .card,
-  .navbar,
-  .book-list {
-    background-color: #343a40 !important;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="url"],
-  input[type="search"],
-  input[type="email"],
-  .input-group-text,
-  .form-select,
-  textarea {
-    background-color: #343a40 !important;
-  }
-  
-  .form-select {
-    color: #929496 !important;
-  }
-  
-  input[type="text"]:hover,
-  input[type="number"]:hover,
-  input[type="url"]:hover,
-  input[type="search"]:hover,
-  input[type="email"]:hover,
-  textarea {
-    background-color: #e9ecf0 !important;
-  }
-  
-  .form-control:focus {
-    box-shadow: none !important;
-  }
-  
-  .form-control:active {
-    color: #ffffff !important;
-  }
-  
-  input[type="text"]:focus {
-    background-color: #ffffff !important;
-  }
-  
-  .search-group {
-    width: 20% !important;
-  }
-  
-  .user-avatar {
-    display: inline-block !important;
-    width: 36px !important ;
-    height: 36px !important;
-    margin: 5px !important;
-    line-height: 36px !important;
-    border-radius: 50% !important;
-    background-size: cover !important;
-    color: white !important;
-  }
-  
-  .icon {
-    color: #ffffff !important;
-  }
+  padding: 0;
+  margin: 0;
+  background-color: #202224 !important;
+  color: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.card,
+.navbar,
+.book-list {
+  background-color: #343a40 !important;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+.input-group-text,
+.form-select,
+textarea {
+  background-color: #343a40 !important;
+}
+
+.form-select {
+  color: #929496 !important;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="url"]:hover,
+input[type="search"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea {
+  background-color: #e9ecf0 !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.form-control:active {
+  color: #ffffff !important;
+}
+
+input[type="text"]:focus {
+  background-color: #ffffff !important;
+}
+
+.search-group {
+  width: 20% !important;
+}
+
+.user-avatar {
+  display: inline-block !important;
+  width: 36px !important ;
+  height: 36px !important;
+  margin: 5px !important;
+  line-height: 36px !important;
+  border-radius: 50% !important;
+  background-size: cover !important;
+  color: white !important;
+}
+
+.icon {
+  color: #ffffff !important;
+}
+
+.card-footer {
+  padding-left: 0 !important;
+  padding-top: 10px !important;
+  padding-right: 0px !important;
+}

@@ -28,14 +28,14 @@ const NavBar = () => {
                   <a
                     className="nav-link"
                     aria-current="page"
-                    href="./registration.html"
+                    href="/register"
                   >
                     <i className="fa fa-user-plus px-1" aria-hidden="true" />
                     Register
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="./login.html">
+                  <a className="nav-link" href="/login">
                     <i className="fa fa-sign-in px-1" aria-hidden="true" />
                     Login
                   </a>

@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
-import { NavBarUser } from '../components'
+import React, { Fragment } from "react";
+import { NavBarUser } from "../components";
 
 const BookList = () => {
   return (
     <Fragment>
-        <NavBarUser />
+      <NavBarUser />
       <section>
         <div className="container my-3 book-list">
           <div className="d-flex justify-content-between">
@@ -239,7 +239,7 @@ const BookList = () => {
         </div>
       </section>
     </Fragment>
-  )
-}
+  );
+};
 
-export default BookList
+export default BookList;

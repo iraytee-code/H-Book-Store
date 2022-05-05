@@ -1,136 +1,118 @@
 import React, { Fragment } from "react";
-import { NavBar } from "../components";
-
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import { NavBar, FormField } from "../components";
+import { Formik } from "formik";
 const Register = () => {
   return (
     <Fragment>
       <NavBar />
-      <section>
-        <div className="row justify-content-center my-5">
-          <div className="col-4">
-            <div className="card">
-              <div className="card-header">
-                <i className="fa fa-user-plus px-1" aria-hidden="true" />
-                Register
-              </div>
-              <div className="card-body">
-                <form action>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i
+      <Container>
+        <Row className="justify-content-center my-5">
+          <Col md={4}>
+            <Card>
+              <Card.Header>
+                <Card.Title>
+                  <i className="fa fa-user-plus px-1" aria-hidden="true" />
+                  Register
+                </Card.Title>
+              </Card.Header>
+
+              <Card.Body>
+                <Formik
+                  initialValues={{
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    gender: "",
+                    password: "",
+                    contactInfo: {
+                      address: "",
+                      phoneNumber: "",
+                    },
+                  }}
+                  onSubmit={(data, { setSubmitting }) => {
+                    // alert(JSON.stringify(data, null, 2));
+                    console.log(data);
+                  }}
+                >
+                  {({
+                    values,
+                    error,
+                    isSubmitting,
+                    handleSubmit,
+                    dirty,
+                    isValid,
+                  }) => (
+                    <Form onSubmit={handleSubmit}>
+                      <FormField.BTextField
+                        controlId={"firstName"}
+                        type={"text"}
+                        placeholder="First Name"
                         className="fa fa-user-circle icon"
-                        aria-hidden="true"
+                        name="firstName"
                       />
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="First Name"
-                      aria-label="First Name"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i
+                      <FormField.BTextField
+                        controlId={"lastName"}
+                        type={"text"}
+                        placeholder="Last Name"
                         className="fa fa-user-circle icon"
-                        aria-hidden="true"
+                        name="lastName"
                       />
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="Last Name"
-                      aria-label="Last Name"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i className="fa fa-user icon" aria-hidden="true" />
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="User Name"
-                      aria-label="User Name"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i className="fa fa-lock icon" aria-hidden="true" />
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="Password"
-                      aria-label="Password"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i className="fa fa-envelope icon" aria-hidden="true" />
-                    </span>
-                    <input
-                      type="email"
-                      className="form-control form-control-sm"
-                      placeholder="Email"
-                      aria-label="Email"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i
+                      <FormField.BTextField
+                        type={"password"}
+                        placeholder="Password"
+                        className="fa fa-lock icon"
+                        name="password"
+                      />
+                      <FormField.BTextField
+                        controlId={"email"}
+                        type="email"
+                        placeholder="Email Address"
+                        className="fa fa-envelope icon"
+                        name="email"
+                      />
+                      <FormField.BTextField
+                        controlId={"phoneNumber"}
+                        type="number"
+                        placeholder="Phone Number"
                         className="fa fa-plus-square icon"
-                        aria-hidden="true"
+                        name="phoneNumber"
                       />
-                    </span>
-                    <input
-                      type="number"
-                      className="form-control form-control-sm"
-                      placeholder="Phone Number"
-                      aria-label="Phone Number"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i
+                      <FormField.BTextField
+                        controlId={"address"}
+                        type="text"
+                        placeholder="Address"
                         className="fa fa-address-card icon"
-                        aria-hidden="true"
+                        name="address"
                       />
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="Address"
-                      aria-label="Address"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                  <div className="d-flex justify-content-end">
-                    <div className="px-2">
-                      <a className="btn btn-success" href="./dashboard.html">
-                        <i className="fa fa-sign-in px-1" aria-hidden="true" />
-                        Register
-                      </a>
-                    </div>
-                    <div className="px-1">
-                      <button className="btn btn-primary">
-                        <i className="fa fa-undo" aria-hidden="true" />
-                        Reset
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                      <Card.Footer>
+                        <Button
+                          type="submit"
+                          size="sm"
+                          variant="success"
+                          onClick={handleSubmit}
+                        >
+                          Submit
+                        </Button>
+                        <Button
+                          type="reset"
+                          size="sm"
+                          variant="primary"
+                          className="mx-2"
+                        >
+                          Rese
+                        </Button>
+                      </Card.Footer>
+
+                      {/* {<pre>{JSON.stringify(values, null, 2)}</pre>} */}
+                    </Form>
+                  )}
+                </Formik>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </Fragment>
   );
 };
